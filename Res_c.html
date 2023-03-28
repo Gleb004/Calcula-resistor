@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang = "ru, en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complete resistment</title>
+    <link rel="stylesheet" href="Res_c.css">
+    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body id = "body">
+<header>
+        <div>
+            <button class = "set" id = "Menu">Menu</button>
+            <div class = "model" id = "popmenu">
+                <div class = "model-content">
+                    <div><button id = "3sum1" class = "Menudr">&nbsp;&nbsp;&nbsp;Sum of three&nbsp;&nbsp;&nbsp;</button></div>
+                    <div><button id = "Res_c" class = "Menudr">&nbsp;&nbsp;&nbsp;Complete resistment&nbsp;&nbsp;&nbsp;</button></div>
+                    <div><button id = "Res_g" class = "Menudr">&nbsp;&nbsp;&nbsp;General resistment by first&nbsp;&nbsp;&nbsp;</button></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button style = "border-right: none; margin-right: 0" id = "settings" class = "set">Settings</button>
+            <div class = "model" id = "popset">
+                <div class = "model-content">
+                    <select>
+                        <option>Block fields</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button style = "border-right: none; margin-right: 0" class = "set" id = "info1">Info</button>
+            <div class = "model" id = "popinfo">
+                <div class = "model-content" style="text-align: left">
+                    <ul>
+                        <li>Type a number into the "Resistor" input field</li>
+                        <li>Press add to creat a new value of the resistor</li>
+                        <li>Press "Calculate" to calculate the general parallel value</li>
+                        <li>Press "Start over" to start over again</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button style = "border-right: none; margin-right: 0" class = "set" id = "HomePage">Home</button>
+        </div>
+    <div style = 'padding-bottom: 4%'></div>
+</header>
+
+<div style="display: none">
+    <input id = "Input1" class = "Input_1" value="0" placeholder="Resistor..." onkeydown="correct()">
+    <button id = "Type1" style="border-color: green" class="Addb" onclick = "Type(this)">Om</button>
+    <button id = "Add1" class = "Addb" onclick = "Add()">add+</button>
+
+</div>
+
+
+<div id = "clone_field"></div>
+
+<div>
+    <div style="border-color: indigo" class = "set_down" onclick="remove()">Start over</div>
+    <div style="border-color: goldenrod; margin-right: 1%" class = "set_down" onclick="calc()">Calculate</div>
+    <div style="padding-bottom: 12%; opacity: 0; cursor: default" class = "set_down">Calculate</div>
+
+    <div class = "hidden" id = "hidden">
+        <div><button onclick="set_r(this)" class = 'bhidden'>Om</button></div>
+        <div><button onclick="set_r(this)" class = 'bhidden'>KOm</button></div>
+        <div><button onclick="set_r(this)" class = 'bhidden'>MOm</button></div>
+        <div><button onclick="set_r(this)" class = 'bhidden'>GOm</button></div>
+        <div><button onclick="set_r(this)" class = 'bhidden'>TOm</button></div>
+    </div>
+
+    <div id = 'back' class="back"></div>
+
+
+</div>
+
+
+</body>
+
+<script src = "Res_c.js"></script>
+<script src = "main_style_script.js"></script>
+
+
+
+
+
+

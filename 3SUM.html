@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang = "ru, en">
+<head>
+    <meta charset="UTF-8">
+    <title>3_sum</title>
+    <link rel="stylesheet" href="3sum_style.css">
+    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body id = "body">
+<header>
+        <div>
+            <button class = "set" id = "Menu">Menu</button>
+            <div class = "model" id = "popmenu">
+                <div class = "model-content">
+                    <div><button id = "3sum1" class = "Menudr">&nbsp;&nbsp;&nbsp;Sum of three&nbsp;&nbsp;&nbsp;</button></div>
+                    <div><button id = "Res_c" class = "Menudr">&nbsp;&nbsp;&nbsp;Complete resistment&nbsp;&nbsp;&nbsp;</button></div>
+                    <div><button id = "Res_g" class = "Menudr">&nbsp;&nbsp;&nbsp;General resistment by first&nbsp;&nbsp;&nbsp;</button></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button style = "border-right: none; margin-right: 0" id = "settings" class = "set">Settings</button>
+            <div class = "model" id = "popset">
+                <div class = "model-content">
+                    <div>
+                        <label>Value: </label><input class = "setin" id = "goal"> &nbsp;
+                        <select id = "select1">
+                            <option>Om</option>
+                            <option>KOm</option>
+                            <option>MOm</option>
+                            <option>GOm</option>
+                            <option>TOm</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Precision: </label><input class = "setin" id = "precision"><label>&nbsp;&nbsp;(%)</label>
+                    </div>
+                    <div>
+                        <input style="margin-top: 5%" type = "checkbox" id = "recalcbox" checked>
+                        <label>Recalculate</label>
+                    </div>
+                    <div><button class="clear" onclick="clearall()">&nbsp;Clear All&nbsp;</button></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button style = "border-right: none; margin-right: 0" class = "set" id = "info1">Info</button>
+            <div class = "model" id = "popinfo">
+                <div class = "model-content" style="text-align: left">
+                    <ul>
+                        <li>Type a number into the "Resistor" input field</li>
+                        <li>Press add to creat a new value of the resistor</li>
+                        <li>If the program spots a sum of three equals, it will output the result</li>
+                        <li>Set recalculate to true if you want to find all the sums of the new value</li>
+                        <li>Double click on the element to eliminate</li>
+                        <li>Press 'Clear All' to clear the page</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button style = "border-right: none; margin-right: 0" class = "set" id = "HomePage">Home</button>
+        </div>
+</header>
+
+
+<input id = "minput" class = "Input_1" placeholder="Resistor..."> <!-- receiver -->
+<button id = "Type1" style="border-color: green" class="Addb" onclick = "Type()">Om</button>
+<button class = "Addb" onclick = "Add()">add+</button> <!-- adding and checking -->
+
+<div class = "hidden" id = "hidden">
+    <div><button name = 'sel1' onclick="set_r(this)" class = 'bhidden'>Om</button></div>
+    <div><button name = 'sel1' onclick="set_r(this)" class = 'bhidden'>KOm</button></div>
+    <div><button name = 'sel1' onclick="set_r(this)" class = 'bhidden'>MOm</button></div>
+    <div><button name = 'sel1' onclick="set_r(this)" class = 'bhidden'>GOm</button></div>
+    <div><button name = 'sel1' onclick="set_r(this)" class = 'bhidden'>TOm</button></div>
+</div>
+
+<div id = 'back' class="back"></div>
+
+<div>
+    <div class = "left" id = "left"> <!-- user add information -->
+        <div id = "in"></div> <!-- make a button obsolete by obscuring it with colour if the user presses twice -->
+    </div>
+    <div class = "right" id = "right"> <!-- programs' output -->
+        <div id = "out"></div>
+    </div>
+</div>
+
+
+
+</body>
+
+<script src = "3sum_script.js"></script>
+<script src = "main_style_script.js"></script>
+
+
+
+
+
+
